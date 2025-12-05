@@ -1,16 +1,3 @@
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    const height = window.innerHeight;
-    if (top < height - 100) {
-      section.classList.add('active');
-    }
-  });
-});
-
 // Preencher barras de habilidades
 window.addEventListener('load', () => {
   const skillFills = document.querySelectorAll('.skill-fill');
@@ -35,3 +22,4 @@ filterButtons.forEach(button => {
     });
   });
 });
+
