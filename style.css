@@ -1,0 +1,180 @@
+/* Corpo e fundo */
+body {
+  background: url(imagens/bg-desktop.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 48px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+header h1:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Perfil */
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile .avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00b469;
+}
+
+/* Habilidades */
+.skills {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  background: #1c1c1e;
+  border-radius: 12px;
+}
+
+.skills h2 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.skill-bar {
+  background: #33334d;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: #00b469;
+  width: 0;
+  transition: width 1s ease;
+}
+
+/* Projetos */
+.projects {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.projects h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.project {
+  background: #2c2c3a;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  box-shadow: 0 0 20px #ff9f1c;
+  transform: translateY(-5px);
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #00ffc88e;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00a78b;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #008031;
+}
+
+/* Filtros */
+.filters button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background: #00b469;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.filters button:hover {
+  transform: scale(1.1);
+  background: #00ff88;
+}
+
+/* Currículo */
+.resume {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  background: #1c1c1e;
+  border-radius: 12px;
+}
+
+.resume h2 {
+  color: #00b469;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00b469;
+  padding-bottom: 5px;
+}
+
+.resume ul {
+  padding-left: 20px;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  .skills, .resume {
+    padding: 15px;
+  }
+}
