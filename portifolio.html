@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio & Currículo do Fei</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Fei Rune</h1>
+    <p>Desenvolvedor em formação & Futuro Ninja do CSS</p>
+  </header>
+
+  <!-- Perfil -->
+  <section class="profile reveal">
+    <img src="imagens/fei-avatar.jpg" alt="Avatar do Fei" class="avatar">
+    <p>Estudante de HTML, CSS, JavaScript e Python. Apaixonado por criar portfólios interativos e sites responsivos.</p>
+  </section>
+
+  <!-- Habilidades -->
+  <section class="skills reveal">
+    <h2>Habilidades</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="68%"></div></div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="55%"></div></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="30%"></div></div>
+    </div>
+  </section>
+
+  <!-- Projetos com filtros -->
+  <section class="projects reveal">
+    <h2>Projetos</h2>
+    <div class="filters">
+      <button data-filter="all">Todos</button>
+      <button data-filter="web">Web</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project" data-category="web">
+        <h3>Doceria Fina</h3>
+        <p>Vitrine digital para uma loja de sobremesas.</p>
+        <a href="https://solange-alves-docaria-fina.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Visitar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Currículo -->
+  <section class="resume reveal">
+    <h2>Resumo Profissional</h2>
+    <p>Estudante de programação focado em HTML, CSS e Python. Apaixonado por criar portfólios interativos e sites responsivos.</p>
+
+    <h2>Experiência</h2>
+    <ul>
+      <li>Desenvolvimento de projetos de portfólio pessoal</li>
+      <li>Criação de sites para pequenos negócios (ex: Doceria Fina)</li>
+    </ul>
+
+    <h2>Contato</h2>
+    <p>Email: fei@example.com</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
