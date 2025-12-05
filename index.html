@@ -3,153 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio do Fei</title>
-  <style>
-    /* Corpo da página */
-    body {
-      background: url(imagens/bg-desktop.jpg) no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      font-size: 20px;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* Transição suave nos links e botões */
-    a, button {
-      transition: all 0.3s ease;
-    }
-
-    /* Efeito de hover no texto */
-    h1:hover {
-      color: orange;
-      transform: scale(1.1);
-    }
-
-    /* Responsividade básica */
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-      }
-      h1 {
-        font-size: 40px;
-      }
-    }
-
-    /* Seção de conteúdo */
-    .content {
-      max-width: 800px;
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    /* PROFILE CARD */
-    .profile-card {
-      text-align: center;
-      padding: 20px;
-      background: #1c1c1e;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .profile-card:hover {
-      box-shadow: 0 0 20px #00b469;
-      transform: translateY(-5px);
-    }
-
-    .profile-card .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #00ff22;
-      margin-bottom: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .profile-card .avatar:hover {
-      transform: scale(1.05) rotate(2deg);
-    }
-
-    /* PROJECTS GRID */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-    }
-
-    .project {
-      background: #2c2c2e;
-      padding: 15px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      box-shadow: 0 0 15px #00ffb3;
-      transform: translateY(-3px);
-    }
-
-    .project h3 { color: #fff; margin-bottom: 5px; }
-    .project p { color: #ccc; font-size: 14px; }
-
-    /* BOTÕES */
-    .btn {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 6px 12px;
-      background: #00ffc88e;
-      color: #fff;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #00a78b;
-      transform: scale(1.05);
-      box-shadow: 0 0 8px #008031;
-    }
-
-  </style>
+  <title>Portfólio & Currículo do Fei</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Meu Portfólio</h1>
+  <!-- Header -->
+  <header>
+    <h1>Fei Rune</h1>
+    <p>Desenvolvedor em formação & Futuro Ninja do CSS</p>
+  </header>
 
-  <main class="container">
-    <!-- LADO ESQUERDO -->
-    <aside class="left-panel">
-      <!-- PERFIL -->
-      <section class="profile-card">
-        <img class="avatar" src="imagens/fei-avatar.jpg" alt="Avatar do Fei">
-        <h2>Fei</h2>
-        <p class="role">Desenvolvedor em Formação</p>
-        <p class="bio">Estudante de HTML, CSS e JavaScript.</p>
-      </section>
-    </aside>
+  <!-- Perfil -->
+  <section class="profile reveal">
+    <img src="imagens/fei-avatar.jpg" alt="Avatar do Fei" class="avatar">
+    <p>Estudante de HTML, CSS, JavaScript e Python. Apaixonado por criar portfólios interativos e sites responsivos.</p>
+  </section>
 
-    <!-- LADO DIREITO -->
-    <section class="right-panel">
-      <!-- PROJETOS -->
-      <section class="info-card">
-        <h2>Projetos</h2>
-        <div class="projects-grid">
-          <div class="project">
-            <h3>Doceria Fina</h3>
-            <p>Site feito para ser uma vitrine digital para uma Loja</p>
-            <a href="https://solange-alves-docaria-fina.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Visitar</a>
-          </div>
-          <div class="project">
-            <h3>Em breve</h3>
-            <p>Mais projetos a caminho!</p>
-          </div>
-        </div>
-      </section>
-    </section>
-  </main>
+  <!-- Habilidades -->
+  <section class="skills reveal">
+    <h2>Habilidades</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="68%"></div></div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="55%"></div></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><div class="skill-fill" data-width="30%"></div></div>
+    </div>
+  </section>
 
+  <!-- Projetos com filtros -->
+  <section class="projects reveal">
+    <h2>Projetos</h2>
+    <div class="filters">
+      <button data-filter="all">Todos</button>
+      <button data-filter="web">Web</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project" data-category="web">
+        <h3>Doceria Fina</h3>
+        <p>Vitrine digital para uma loja de sobremesas.</p>
+        <a href="https://solange-alves-docaria-fina.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Visitar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Currículo -->
+  <section class="resume reveal">
+    <h2>Resumo Profissional</h2>
+    <p>Estudante de programação focado em HTML, CSS e Python. Apaixonado por criar portfólios interativos e sites responsivos.</p>
+
+    <h2>Experiência</h2>
+    <ul>
+      <li>Desenvolvimento de projetos de portfólio pessoal</li>
+      <li>Criação de sites para pequenos negócios (ex: Doceria Fina)</li>
+    </ul>
+
+    <h2>Contato</h2>
+    <p>Email: fei@example.com</p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
